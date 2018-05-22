@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang='pt-br'>
+	<head>
+		<meta charset='utf-8' >
+		<title>Test</title>
+		<style>
+		/*https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php*/
+		.videoWrapper {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			padding-top: 25px;
+			height: 0;
+		}
+		
+		.videoWrapper iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="youtubeURL" value="https://www.youtube.com/watch?v=R7y9xl3ENec" /> 
+		<div id="youtubeRESULT"></div>
+		<script src="youtube.js"></script>
+		<script>
+			var data = {
+				youtubeURL : GetValueId("youtubeURL"),
+				youtubeRESULT : "youtubeRESULT"
+			};
+			CreateYoutube(data);
+		</script>
+	</body>
+</html>
